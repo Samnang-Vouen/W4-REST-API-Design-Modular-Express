@@ -1,0 +1,19 @@
+1. Why do sub-resource routes like /journalists/:id/articles help?
+=> They show clear relationships between resources, improve URL readability,
+and scope data access logically, making the API easier to understand and use.
+
+2. Pros and cons of in-memory dummy data vs real database?
+Pros: Easy setup, fast, no dependencies, good for quick prototyping.
+Cons: Data lost on restart, no persistence, limited querying, not scalable.
+
+3. How to modify structure for journalist authentication to manage own articles?
+=> Add auth middleware and user model, protect routes so journalists can only manage their own articles, 
+and create login/register routes.
+
+4. Challenges linking related resources (like journalistId), and solutions?
+=> Ensuring referenced IDs exist without DB constraints—solve by manual checks in code.
+Handling deletions carefully to avoid orphaned data.
+
+5. How does RESTful design help frontend developers?
+=> It makes the API predictable, consistent, and easy to navigate with clear URLs and HTTP methods,
+simplifying frontend integration and data fetching.
