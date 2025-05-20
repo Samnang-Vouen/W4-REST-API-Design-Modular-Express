@@ -1,4 +1,5 @@
 import express from 'express';
+import logger from '../middleware/logger.js';
 import { 
     getAllUsers,
     createNewUser,
@@ -11,8 +12,8 @@ const userRouter = express.Router();
 
 userRouter.get('/', getAllUsers);
 userRouter.get('/:id', getUserById);
-userRouter.post('/', createNewUser);
-userRouter.put('/:id', updateUser);
+userRouter.post('/', logger, createNewUser);
+userRouter.put('/:id', logger, updateUser);
 userRouter.delete('/:id', deleteUser);
 
 export default userRouter;
