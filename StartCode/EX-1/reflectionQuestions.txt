@@ -1,6 +1,7 @@
 1. Why is separating concerns (routes, controllers, models, middleware) important in backend 
 development? 
-=> 
+=> Separating concerns makes our project cleaner, faster to debug, easier to scale, and more collaborative.
+
 2. What challenges did you face when refactoring the monolithic server.js into multiple files? 
 =>  Comfusing
 
